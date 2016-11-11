@@ -1,4 +1,10 @@
-function hello(name) {
-  console.log(`Hello ${name}`); // eslint-disable-line
-}
-hello('JS World');
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+  res.send('test');
+});
+
+app.listen(3000, function () {
+  console.log('Example app listeting port 3000');
+});
